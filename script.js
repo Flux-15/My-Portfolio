@@ -158,17 +158,28 @@ function blackhole(elementId) {
         });
     }
 
-    // Window Resize
+    // Window Resize - Optimized to prevent reset on mobile scroll (address bar toggle)
+    let lastWidth = window.innerWidth;
+    
     window.addEventListener('resize', () => {
-        w = element.offsetWidth;
-        h = element.offsetHeight;
-        cw = w;
-        ch = h;
-        centerx = cw / 2;
-        centery = ch / 2;
-        canvas.width = cw;
-        canvas.height = ch;
-        // setDPI(canvas, 192); // Re-setting DPI logic might reset context
+        // Only re-init if width changes (e.g. orientation change or desktop resize)
+        // Ignoring height changes avoids re-init when mobile address bar hides/shows
+        if (window.innerWidth !== lastWidth) {
+            lastWidth = window.innerWidth;
+            
+            w = element.offsetWidth;
+            h = element.offsetHeight;
+            cw = w;
+            ch = h;
+            centerx = cw / 2;
+            centery = ch / 2;
+            canvas.width = cw;
+            canvas.height = ch;
+            // Optionally, we could just clear and re-draw without re-creating stars, 
+            // but re-creating ensures distribution matches new aspect ratio.
+            stars = []; // Clear existing
+            init(); // Re-initialize
+        }
     });
 
     function loop() {
@@ -189,7 +200,11 @@ function blackhole(elementId) {
         context.fillStyle = 'rgba(25,25,25,1)';
         context.fillRect(0, 0, cw, ch);
         
-        for (let i = 0; i < 2500; i++) {
+        // Detect Mobile (based on width) to reduce particle count for performance
+        const isMobile = window.innerWidth < 768;
+        const particleCount = isMobile ? 800 : 2500;
+
+        for (let i = 0; i < particleCount; i++) {
             stars.push(new Star());
         }
         loop();
@@ -256,4 +271,3 @@ document.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
-
