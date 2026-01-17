@@ -1,233 +1,272 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FluX | Portfolio</title>
+    <title>FluX | Research & Engineering</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <link rel="icon" href="logo_f.png" type="image/png">
 </head>
 <body>
+    <div id="blackhole">
+        <div class="centerHover"><span>ENTER</span></div>
+    </div>
+    
+    <nav class="glass-nav">
+        <div class="logo">FluX<span class="blink">_</span></div>
+        <div class="menu-toggle" id="burger-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul id="nav-list">
+            <li><a href="#about" class="nav-link">./About</a></li>
+            <li><a href="#projects" class="nav-link">./Projects</a></li>
+            <li><a href="#research" class="nav-link">./Research</a></li>
+            <li><a href="#skills" class="nav-link">./Skills</a></li>
+            <li><a href="#contact" class="nav-link">./Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Header Section -->
-    <header>
+    <header id="home">
+        <div class="header-overlay"></div>
         <div class="header-content">
-            <div class="text-content">
-                <h1>Patel Om Sanjaykumar</h1>
-                <p>Robotics | MATLAB | Microcontrollers | Optimization</p>
-                <div class="personal-details">
-                    <p><strong>🎓 Current:</strong> B.Tech in ECE, PDEU</p>
-                    <p><strong>🎓 Past:</strong> Diploma in Electrical Engg., Shri K J Polytechnic</p>
-                    <p><strong>📅 Age:</strong> 19</p>
-                    <p><strong>📧 Email:</strong> omspatel15@gmail.com</p>
+            <p class="overline">> INITIALIZING SYSTEM...</p>
+            <h1 class="glitch" data-text="Patel Om Sanjaykumar">Patel Om Sanjaykumar</h1>
+            <p class="subtitle">Robotics | Microcontrollers | Optimization | <span class="highlight">Researcher</span></p>
+            
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                </div>
+                <div class="terminal-body">
+                    <p>> 当前状态: <strong>B.Tech in ECE</strong></p>
+                    <p>> 专长: <strong>Robotics, MATLAB, AI</strong></p>
+                    <p>> Email: <a href="mailto:omspatel15@gmail.com">omspatel15@gmail.com</a></p>
                 </div>
             </div>
+        </div>
+        <div class="scroll-down">
+            <span>SCROLL</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </header>
 
-    <!-- Navigation Bar -->
-    <!-- Navigation Bar -->
-<nav>
-    <div class="navbar-toggler" id="burger-icon">
-        <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
-    </div>
-    <ul id="nav-list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="Heading-two">👨‍💻 About Me</h2>
-        <div class="about-container">
-            <div class="about-card">
-                <p>Hey! I'm <strong>Om Patel</strong>, a passionate engineer emphasizing in <strong>Robotics, Embedded Systems, Microcontrollers, MATLAB, and Optimization</strong>. With years of experience in research and hands-on projects, I focus on developing innovative solutions for real-world problems.</p>
-            
-                <p>My work spans across autonomous systems, pathfinding algorithms, and control systems. I have published multiple research papers in metaheuristic optimization and optimization.</p>
-        
-                <p>Currently, I'm pursuing <strong>B.Tech in Electrical and Communication Engineering</strong> at Pandit Deendayal Energy University, and I previously earned a diploma in Electrical Engineering from Shri K J Polytechnic, Bharuch.</p>
-        
-                <p>Besides engineering, I enjoy experimenting with new technologies and mentoring students in engineering!</p>
-                
-                <a href="#contact" class="contact-button">📩 Contact Me</a>
+    <main>
+        <!-- About Section -->
+        <section id="about" class="tech-section">
+            <div class="section-header">
+                <h2>01. <span class="highlight">About Me</span></h2>
+                <div class="line"></div>
             </div>
-        </div>
-    </section>
+            <div class="about-container">
+                <div class="about-card glass-card">
+                    <p><span class="code-font">const bio = </span> "Hey! I'm <strong>Om Patel</strong>, a passionate engineer emphasizing in <strong>Robotics, Embedded Systems, Microcontrollers, MATLAB, and Optimization</strong>. With years of experience in research and hands-on projects, I focus on developing innovative solutions for real-world problems.";</p>
+                    <br>
+                    <p>My work spans across autonomous systems, pathfinding algorithms, and control systems. I have published multiple research papers in metaheuristic optimization.</p>
+                    <br>
+                    <p>Currently pursuing <strong>B.Tech in ECE</strong> at PDEU.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="Heading-two">🚀 My Projects</h2>
-        <div class="projects-container">
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">Arduino-based Smart Soil Moisture and Monitoring System</h3>
-                        <p>Developed an automated system to monitor and control soil moisture using sensors and an Arduino. The system triggers irrigation when moisture levels fall below a set threshold, ensuring optimal plant health.</p>
+        <!-- Projects Section -->
+        <section id="projects" class="tech-section">
+            <div class="section-header">
+                <h2>02. <span class="highlight">Projects</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="projects-container">
+                <!-- Project Cards -->
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>Smart Soil Moisture System</h3>
+                        <p class="tech-stack">[Arduino, Sensors, Automation]</p>
+                        <p>Automated irrigation system using soil moisture sensors and Arduino to ensure optimal plant health.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">8051 Stepper Motor Control</h3>
-                        <p>Designed a stepper motor control system using the 8051 microcontroller, allowing precise positioning and rotation for mechanical applications, such as robotic arms and CNC machines.</p>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>8051 Stepper Motor Control</h3>
+                        <p class="tech-stack">[8051, Assembly, Motors]</p>
+                        <p>Precise positioning control system for mechanical applications like CNC machines.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">Smart Calculator using MATLAB</h3>
-                        <p>Created a smart calculator with advanced features in MATLAB, offering a user-friendly interface for performing mathematical operations and solving complex equations with ease.</p>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>Smart Calculator (MATLAB)</h3>
+                        <p class="tech-stack">[MATLAB, GUI, Math]</p>
+                        <p>Advanced calculator with user-friendly interface for complex equations.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">Quadcopter Simulation in Simulink</h3>
-                        <p>Simulated a quadcopter's flight dynamics and control algorithms in Simulink, focusing on stability, navigation, and sensor integration.</p>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>Quadcopter Simulation</h3>
+                        <p class="tech-stack">[Simulink, Flight Dynamics]</p>
+                        <p>Simulation of flight dynamics, stability, and navigation algorithms.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">AI-based Smart Tic-Tac-Toe Game in MATLAB</h3>
-                        <p>Developed an AI-powered Tic-Tac-Toe game in MATLAB, where the AI uses basic algorithms to make decisions and challenge players in the classic game.</p>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>AI Tic-Tac-Toe</h3>
+                        <p class="tech-stack">[MATLAB, AI, Game Logic]</p>
+                        <p>AI-powered game using basic decision-making algorithms.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">2-Degree of Freedom Robotic Arm with Gripper using Arduino</h3>
-                        <p>Designed and implemented a robotic arm with two degrees of freedom and a gripper using Arduino, providing basic movement and object handling capabilities.</p>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>2-DOF Robotic Arm</h3>
+                        <p class="tech-stack">[Arduino, Servo, Kinematics]</p>
+                        <p>Robotic arm with gripper for basic object handling.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">Bluetooth-based ESP32 Car with Custom Android Application</h3>
-                        <p>Created a Bluetooth-controlled car using the ESP32, which is operated through a custom Android application, allowing remote control with live feedback.</p>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>Bluetooth ESP32 Car</h3>
+                        <p class="tech-stack">[ESP32, Android App, Bluetooth]</p>
+                        <p>Remote controlled car via custom Android application.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">ESP32-based Master-Slave Communication for Micromouse</h3>
-                        <p>Developed a communication system using the ESP32 to control a Micromouse robot, implementing master-slave architecture for efficient movement and decision-making.</p>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>Micromouse (Master-Slave)</h3>
+                        <p class="tech-stack">[ESP32, Multi-Agent, Algorithms]</p>
+                        <p>Master-slave communication system for efficient maze solving.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">ESP32-based Robotics (Line Follower, Obstacle Avoider, Collision Avoider, Object Follower)</h3>
-                        <p>Created multiple robotics projects using the ESP32:
-                            <ul>
-                                <li>Line Follower: A robot that follows a line using sensors.</li>
-                                <li>Obstacle Avoider: A robot that detects and avoids obstacles in its path.</li>
-                                <li>Collision Avoider: A robot designed to prevent collisions by sensing its surroundings.</li>
-                                <li>Object Follower: A robot that tracks and follows an object based on specific signals.</li>
-                            </ul>
-                        </p>
+                <div class="project-card glass-card">
+                    <div class="card-content">
+                        <h3>ESP32 Robotics Suite</h3>
+                        <p class="tech-stack">[ESP32, Sensors]</p>
+                        <p>Line Follower, Obstacle Avoider, Collision Avoider, Object Follower.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">Autonomous Aerial Vehicle with Modified A* Algorithm</h3>
-                        <p>Currently working on developing an autonomous aerial vehicle with a modified A* algorithm. The vehicle will operate with SLAM and vSLAM, using LiDAR and a depth camera for navigation and obstacle avoidance.</p>
+                <div class="project-card glass-card active-project">
+                    <div class="card-header">
+                        <span class="status-dot blink"></span> In Progress
+                    </div>
+                    <div class="card-content">
+                        <h3>Autonomous Aerial Vehicle</h3>
+                        <p class="tech-stack">[SLAM, vSLAM, LiDAR, A*]</p>
+                        <p>UAV with modified A* algorithm for pathfinding and obstacle avoidance.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="box">
-                        <h3 class="h3_preject">Smart 7-Degree Freedom Robotic Arm Playing Tic-Tac-Toe</h3>
-                        <p>Currently working on designing a smart 7-degree freedom robotic arm capable of playing Tic-Tac-Toe. The arm will combine advanced movement mechanics and AI to play the game autonomously.</p>
+                <div class="project-card glass-card active-project">
+                    <div class="card-header">
+                        <span class="status-dot blink"></span> In Progress
+                    </div>
+                    <div class="card-content">
+                        <h3>7-DOF Robotic Arm</h3>
+                        <p class="tech-stack">[AI, Kinematics, Control]</p>
+                        <p>Smart arm capable of playing Tic-Tac-Toe autonomously.</p>
                     </div>
                 </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-   
-    <section id="research">
-        <h2 class="Heading-one">📑 Research Papers</h2>
-        <div class="research-card">
-            <h3 class="h3_res">Design optimization of safety transformer using decomposition-based multi-objective heat transfer search algorithm</h3>
-            <p>The research examines the real-world implementation of metaheuristic algorithms, namely HTS, EO, MFO and TEO, in optimizing the ’Safety Transformer’ in engineering systems. By prioritizing objectives like weight reduction, efficiency enhancement and dual-objective optimization, the study seeks to prove the efficacy of these algorithms in tackling intricate engineering challenges, specifically in the realm of safety transformer design. This investigation makes a valuable contribution to the advancement of optimization in engineering by highlighting the practical applicability of metaheuristic algorithms in intricate engineering optimization problems.</p>
-            <a href="https://pubs.aip.org/aip/acp/article-abstract/3217/1/040014/3327748/Design-optimization-of-safety-transformer-using?redirectedFrom=fulltext" target="_blank" class="contact-button">🔗 Full Paper</a>
-        </div>
-    
-        <div class="research-card">
-            <h3 class="h3_res">Design optimization of BLDC motor using multi-objective plasma generation algorithm</h3>
-            <p>In this paper, a novel Multi-Objective Plasma Generation Optimization (MOPGO) algorithm is introduced. It integrates Non-Dominant Sorting (NDS) and Crowding Distance (CD) methods to solve multi- objective optimization problems effectively. The NDS approach preserves non-dominated solutions, while the CD method ensures diversity among solutions. MOPGO addresses key challenges in optimization such as Pareto dominance, solution diversity. This balanced approach achieves superior optimization performance by maintaining an equilibrium between global diversification and local intensification. The consequences for computational efficiency and solution quality are discussed and compared with other notable algorithms like Equilibrium Optimizer (EO), Thermal Exchange Optimization (TEO), Generalized Normal Distribution Optimization (GNDO) and Moth Flame Optimization (MFO).</p>
-            <a href="https://pubs.aip.org/aip/acp/article-abstract/3217/1/030008/3327729/Design-optimization-of-BLDC-motor-using-multi?redirectedFrom=fulltext" target="_blank" class="contact-button">🔗 Full Paper</a>
-        </div>
-    
-        <div class="research-card">
-            <h3 class="h3_res">Optimal coordination of directional overcurrent relays using RIME optimizer (under review)</h3>
-            <p>Microgrids and distributed generation (DG) improve conventional power systems, however they interfere with distribution networks' safety measures. Short-circuit current magnitudes are changed by their integration, leading to problems including blind protection, delayed response, and false tripping. Smart protection systems with automatic grid configuration and fault recovery capabilities are needed to meet these challenges. In order enhance directional overcurrent relay (DOCR) settings for any grid configuration without the need for parameter alteration, this study suggests the Rime Optimization Algorithm. (RIME). RIME was particularly superior to Liver Cancer Algorithm (LCA), Grey Wolf Optimizer (GWO), and Moth flame optimization (MFO) when tested on 3-bus, and 30-bus systems. The results show how RIME provides dependable protection system coordination due to its higher convergence speed, adaptability, and computational effectiveness.</p>
-        </div>
+        <!-- Research Section -->
+        <section id="research" class="tech-section">
+            <div class="section-header">
+                <h2>03. <span class="highlight">Research</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="research-grid">
+                <div class="research-card glass-card">
+                    <h3>Safety Transformer Optimization</h3>
+                    <p class="meta">HTS, EO, MFO, TEO Algorithms</p>
+                    <p>Optimizing safety transformers using decomposition-based multi-objective heat transfer search algorithms.</p>
+                    <a href="https://pubs.aip.org/aip/acp/article-abstract/3217/1/040014/3327748" target="_blank" class="btn-link">Read Paper <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="research-card glass-card">
+                    <h3>BLDC Motor Optimization</h3>
+                    <p class="meta">Multi-Objective Plasma Generation</p>
+                    <p>Novel MOPGO algorithm integrating Non-Dominant Sorting and Crowding Distance.</p>
+                    <a href="https://pubs.aip.org/aip/acp/article-abstract/3217/1/030008/3327729" target="_blank" class="btn-link">Read Paper <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="research-card glass-card pending">
+                    <h3>Directional Overcurrent Relays</h3>
+                    <p class="meta">RIME Optimizer | <strong>Under Review</strong></p>
+                    <p>Optimal coordination using Rime Optimization Algorithm for grid configuration.</p>
+                </div>
+                <div class="research-card glass-card pending">
+                    <h3>EV Charging Infrastructure</h3>
+                    <p class="meta">Queuing-Based Threshold Policy | <strong>Under Review</strong></p>
+                    <p>Queuing-theoretic framework for single-server EV charging networks.</p>
+                </div>
+            </div>
+            
+            <div class="current-work glass-card">
+                <h3><i class="fas fa-microscope"></i> Current Research Focus</h3>
+                <ul>
+                    <li><strong>SDM, DDM, TDM Optimization:</strong> Single, Double, Triple diode models.</li>
+                    <li><strong>EV Station Costing:</strong> Optimal cost finding logic.</li>
+                    <li><strong>TOPSIS & ANFIS:</strong> Multi-criteria decision making systems.</li>
+                    <li><strong>UAV Pathfinding:</strong> Modified A* Algorithm.</li>
+                    <li><strong>LiFi Technology:</strong> High-speed wireless communication.</li>
+                </ul>
+            </div>
+        </section>
 
-        <div class="research-card">
-            <h3 class="h3_res">Optimal Charging Strategies for Electric Vehicle Infrastructures Using Queuing-Based Threshold Policy (under review)</h3>
-            <p>This study presents a queueing-theoretic framework for single-server electric vehicle (EV) charging networks, utilizing threshold-based strategies to enhance system efficiency. The approach incorporates stochastic modeling and Chapman-Kolmogorov equations to dynamically modify service rates when demand reaches predetermined thresholds, thereby minimizing waiting times and optimizing server utilization. Further, numerous system performance indicators are demonstrated to emphasize the efficiency and superior performance of EV charging infrastructure. Further, numerical results illustrate the model's efficacy in addressing critical operational issues, providing a practical framework to enhance EV network performance and consumer satisfaction.</p>
-        </div>
-        <div class="research-card">
-            <h3 class="h3_res">Currently Working On:</h3>
-            <p><ul><strong> Optimization of SDM, DDM, and TDM </strong></ul>
-               <li>Exploring optimization techniques for Single diode model (SDM), Doluble diode model (DDM), and Triple diode model (TDM) to improve system performance and efficiency in various engineering applications.</li>
-                
-               <ul><strong> Optimal Cost Finding for EV Charging Stations </strong></ul>
-               <li> Researching methods to determine the optimal cost for establishing electric vehicle (EV) charging stations, considering factors like location, demand, and infrastructure.</li>
-                
-                <ul><strong> Application of Algorithms (TOPSIS & ANFIS) for Optimization </strong></ul>
-                <li>Applying TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) and ANFIS (Adaptive Neuro-Fuzzy Inference System) to optimize engineering systems and improve decision-making in complex scenarios.</li>
-                
-                <ul><strong> Modified A* Algorithm for UVA Pathfinding* </strong></ul>
-                <li>  Developing a modified A* algorithm to enhance pathfinding capabilities for Unmanned Aerial Vehicles (UAVs), optimizing obstacle avoidance and navigation in dynamic environments.</li>
-                
-                <ul><strong> LiFi Technology </strong></ul>
-                <li>   Investigating LiFi (Light Fidelity) as an alternative communication technology, focusing on its applications and potential for high-speed, secure wireless communication.</li></p>
-        </div>
-    </section>
+        <!-- Skills Section -->
+        <section id="skills" class="tech-section">
+            <div class="section-header">
+                <h2>04. <span class="highlight">Arsenal</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Hardware</h3>
+                    <div class="tags">
+                        <span>Embedded Systems</span><span>Microcontrollers</span><span>PCB Design</span><span>IoT</span><span>Robotics</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Software & Algorithms</h3>
+                    <div class="tags">
+                        <span>MATLAB/Simulink</span><span>Python</span><span>C/C++</span><span>Pathfinding (A*)</span><span>Computer Vision</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Core Competencies</h3>
+                    <div class="tags">
+                        <span>Optimization</span><span>Machine Learning</span><span>Signal Processing</span><span>Research</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="Heading-one">🛠️ Skills</h2>
-        <div class="skills-grid">
-            <span>🤖 Embedded Systems & Microcontrollers</span>
-            <span>🌐 IoT Development</span>
-            <span>🔧 Robotics & Automation</span>
-            <span>🧠 Algorithm Development</span>
-            <span>📊 MATLAB/Simulink</span>
-            <span>🎯 Computer Vision & Sensor Fusion</span>
-            <span>🛰️ Simulation & Modeling</span>
-            <span>⚡ PCB Design & Hardware Development</span>
-            <span>📡 Wireless Communication</span>
-            <span>🤖 Machine Learning for Engineering</span>
-            <span>📑 Project & Research Experience</span>
-            <span>🎤 Soft Skills</span>
-            <span>🚀 Leadership & Team Coordination</span>
-            <span>🎓 Teaching & Mentorship</span>
-            <span>⏳ Time Management</span>
-            <span>💡 Problem-Solving & Innovation</span>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact" class="tech-section">
+            <div class="section-header">
+                <h2>05. <span class="highlight">Execute Handshake</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="contact-container glass-card">
+                <p>Available for research collaborations and engineering projects.</p>
+                <div class="contact-links">
+                    <a href="mailto:omspatel15@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Initialize Email</a>
+                    <a href="https://github.com/Flux-15" class="contact-btn"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/om-patel-0591b8321" class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=L5sE4aoAAAAJ" class="contact-btn"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                </div>
+                <p class="contact-details">
+                    <span><i class="fas fa-phone"></i> +91 6357100306</span>
+                </p>
+            </div>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-<section id="contact" class="fade-in">
-    <h2>Contact</h2>
-    <p>📧 Email: omspatel15@gmail.com | omp03062005@gmail.com | 23bec211d@sot.pdpu.ac.in</p>
-    <p>📞 Phone: 6357100306 | 9409044974</p>
-
-    <!-- Social Media Links -->
-    <div class="tm-contact-social">
-        <p> <a href="https://github.com/Flux-15">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/om-patel-0591b8321">LinkedIn</a> | 
-            <a href="https://www.researchgate.net/profile/Om-Patel-45?ev=prf_overview">Research Gate</a> | 
-            <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=L5sE4aoAAAAJ">Google scholar</a></p>
-    </div>
-</section>
-
-<!-- Go Up Button -->
-<button id="goUpBtn">↑</button>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 | FluX</p>
+    <footer class="glass-footer">
+        <p>Designed & Engineered by FluX | &copy; 2026</p>
     </footer>
+
+    <button id="goUpBtn" class="glass-btn"><i class="fas fa-arrow-up"></i></button>
 
 </body>
 </html>
